@@ -9,7 +9,7 @@ class PostsController extends Controller
     public function index()
     {
         return view('blog.index', [
-            'posts' => WinkPost::with('tags')->live()->orderBy('published_date', 'DESC')->paginate(12),
+            'posts' => WinkPost::with('tags')->live()->orderBy('publish_date', 'DESC')->paginate(12),
         ]);
     }
 
